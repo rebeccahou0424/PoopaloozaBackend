@@ -11,7 +11,7 @@ app = Flask(__name__)
 CORS(app)
 
 # 修正 URI 前綴
-uri = os.getenv("http://192.168.0.196:5001")
+uri = os.getenv("SQLALCHEMY_DATABASE_URI")  
 if uri and uri.startswith("postgres://"):
     uri = uri.replace("postgres://", "postgresql://", 1)
 app.config['SQLALCHEMY_DATABASE_URI'] = uri
