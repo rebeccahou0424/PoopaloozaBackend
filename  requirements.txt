@@ -1,7 +1,5 @@
-Flask
-flask-cors
+Flask==2.3.3
 gunicorn
 psycopg2-binary
-requests
+flask-cors
 python-dotenv
-gunicorn
